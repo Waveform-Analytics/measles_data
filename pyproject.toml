@@ -1,0 +1,13 @@
+[project]
+name = "measles-data"
+version = "0.0.1"
+description = "Exploring measles data in the US"
+authors = [
+    {name = "Michelle Weirathmueller", email = "michelle@waveformanalytics.com"},
+]
+requires-python = ">=3.12"
+
+dependencies = [
+    
+]
+
