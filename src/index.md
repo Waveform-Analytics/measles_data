@@ -18,7 +18,7 @@ toc: false
 
 Measles was declared eliminated in the United States in 2000, but in recent years, cases have started to 
 rise again. Using data on measles cases and vaccination rates, we can get a better understanding 
-of what's happening and better interpret what we see and hear from the current administration and from the media. 
+of what's happening and more clearly interpret what we see and hear from the current administration and from the media. 
 
 
 ```js
