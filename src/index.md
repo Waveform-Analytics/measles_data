@@ -25,7 +25,7 @@ of what's happening and more clearly interpret what we see and hear from the cur
 ```js
 import {timeline, timeline_recent}  from "./components/timeline.js";
 import {weekly} from "./components/weekly.js";
-import {vax} from "./components/vax.js";
+import {vax, vax_lines} from "./components/vax.js";
 ```
 
 ```js
@@ -78,6 +78,18 @@ for (const state of states.features) {
 }
 ```
 
+```js
+// Load yearly vaccination data (per state and overall)
+const vax_yearly_raw = await FileAttachment("./data/vax-yearly.csv").csv({typed:true});
+const vax_yearly = vax_yearly_raw.map(d => ({
+  ...d, 
+  percent_change: +d.percent_change,
+  year: +d.year,
+
+}))
+
+```
+
 <div class="card">
 ${resize((width) => timeline(measles, {width, height: 200} ))}
 </div>
@@ -103,9 +115,16 @@ ${resize((width) => weekly(measles_weekly, {width, height: 300}))}
 Next, we're looking at trends from 2009-2024, based on vaccination rates for kindergartners in different states. 
 
 <div class="card">
-${resize((width) => vax(vax_by_fips, states, statemap, {width, height: 300}))}
+${resize((width) => vax(vax_by_fips, states))}
 </div>
 
+There is a lot of variability state to state in terms of changes in vaccination rates, and it's hard to see what's happening overall from the map. The next plot shows the nationwide
+percentages, which takes into account the total population of kindergartners in each state. 
+The shaded area indicates 95% confidence intervals.
+
+<div class="card">
+${resize((width) => vax_lines(vax_yearly, measles, {width, height: 300}))}
+</div>
 
 ## Data Source
 
