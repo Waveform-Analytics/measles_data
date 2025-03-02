@@ -3,13 +3,18 @@
 
 import pandas as pd
 import sys
+import numpy as np
 
 # Read the CSV
 df = pd.read_csv("src/data/measles-cases.csv")
 
-df_sub = df[df['filter'] == "1985-Present*"]
+df_filtered = df.loc[df['filter'] == "1985-Present*"]
 
-df_out = df_sub[['year', 'cases']]
+df_filtered['era'] = np.where(df_filtered['year'] <= 2009, "part1", "part2")
+
+df_output = df_filtered[['year', 'cases', 'era']]
 
 # Write to CSV
-df_out.to_csv(sys.stdout, index=False)
+df_output.to_csv(sys.stdout, index=False)
+
+
