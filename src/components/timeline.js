@@ -26,14 +26,14 @@ export function timeline(cases, {width, height} = {}) {
       Plot.ruleX(cases, {  // Stems
         x: "year",
         y: "cases",
-        stroke: d => d.year >= 2010 ? "#377eb8" : "#e41a1c",
+        stroke: d => d.year >= 2010 ? "#e41a1c" : "#377eb8",
         strokeWidth: 2
       }),
       Plot.dot(cases, {    // Dots
         x: "year",
         y: "cases",
         tip: true,
-        stroke: d => d.year >= 2010 ? "#377eb8" : "#e41a1c",
+        stroke: d => d.year >= 2010 ? "#e41a1c" : "#377eb8",
         fill: "white",
         strokeWidth: 2,
         r: 3,
@@ -55,7 +55,7 @@ export function timeline(cases, {width, height} = {}) {
         stroke: "#666",
         strokeWidth: 1,
         strokeDasharray: "3,3",
-        fill: "#377eb8",
+        fill: "#e41a1c",
         fillOpacity: 0.1
       }),
       Plot.text([
@@ -81,7 +81,7 @@ export function timeline(cases, {width, height} = {}) {
     color: {
       legend: true,
       domain: ["1985-2009", "2010-2025"],
-      range: ["#e41a1c", "#377eb8"]
+      range: ["#377eb8", "#e41a1c"]
     }
   });
 }
@@ -113,14 +113,14 @@ export function timeline_recent(cases, {width, height} = {}) {
       Plot.ruleX(cases, {  // Stems
         x: "year",
         y: "cases",
-        stroke: "#377eb8",
+        stroke: "#e41a1c",
         strokeWidth: 2
       }),
       Plot.dot(cases, {    // Dots
         x: "year",
         y: "cases",
         tip: true,
-        stroke: "#377eb8",
+        stroke: "#e41a1c",
         fill: "white",
         strokeWidth: 2,
         r: 3,
