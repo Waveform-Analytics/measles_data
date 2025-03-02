@@ -6,7 +6,10 @@ toc: false
 # Measles in the US over time
 ## Exploring measles cases and vaccination rates in the United States
 
-Measles was declared eliminated in the United States in 2000, but this highly contagious disease continues to appear in outbreaks. This chart shows the number of measles cases reported annually across the country from 1985 to 2025. The visualization offers two views: a long-term perspective spanning four decades, and a closer look at more recent years (2010-2025). By examining these trends, we can see how vaccination rates, policy changes, and public health responses have influenced the presence of this preventable disease in our communities.
+Measles was declared eliminated in the United States in 2000, but in recent years, cases have started to 
+rise again. Using data on measles cases and vaccination rates, we can get a better understanding 
+of what's happening and better interpret what we see and hear from the current administration and from the media. 
+
 
 ```js
 import {timeline, timeline_recent}  from "./components/timeline.js";
