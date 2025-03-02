@@ -23,6 +23,7 @@ of what's happening and more clearly interpret what we see and hear from the cur
 
 ```js
 import {timeline, timeline_recent}  from "./components/timeline.js";
+import {weekly} from "./components/weekly.js";
 ```
 
 ```js
@@ -40,7 +41,6 @@ const measles = measles_raw.map(d => ({
 const measles_weekly_raw = await FileAttachment("./data/weekly_cases.csv").csv({typed:true});
 const measles_weekly = measles_weekly_raw.map(d => ({
   ...d,
-  year: +d.year,
   cases: +d.cases
 }));
 ```
@@ -51,6 +51,17 @@ ${resize((width) => timeline(measles, {width, height: 200} ))}
 
 <div class="card">
 ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
+</div>
+
+## Weekly cases comparison: 2023-2025
+
+This plot shows, week to week, how the number of measles cases changed between 
+2023-2025. Of course, the data from 2025 is still being collected. This chart is 
+based on data downloaded from the CDC website on March 1st, 2025. The number
+of cases is already out-pacing previous years.
+
+<div class="card">
+${resize((width) => weekly(measles_weekly, {width, height: 300}))}
 </div>
 
 ## Vaccination rates
@@ -65,10 +76,7 @@ coming soon...
 
 [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
 
-<!-- ```js
-// Show data array for QC / comment this out
-display(measles)
-```  -->
+
 
 </div>
 
