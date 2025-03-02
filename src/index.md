@@ -51,6 +51,7 @@ ${resize((width) => timeline(measles, {width, height: 200} ))}
 
 <div class="card">
 ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
+
 </div>
 
 ## Weekly cases comparison: 2023-2025
