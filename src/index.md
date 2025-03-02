@@ -9,6 +9,7 @@ toc: false
   margin: 0 auto;
   padding: 0 20px;
 }
+
 </style>
 
 <div class="content">
@@ -24,6 +25,7 @@ of what's happening and more clearly interpret what we see and hear from the cur
 ```js
 import {timeline, timeline_recent}  from "./components/timeline.js";
 import {weekly} from "./components/weekly.js";
+import {vax} from "./components/vax.js";
 ```
 
 ```js
@@ -41,8 +43,39 @@ const measles = measles_raw.map(d => ({
 const measles_weekly_raw = await FileAttachment("./data/weekly_cases.csv").csv({typed:true});
 const measles_weekly = measles_weekly_raw.map(d => ({
   ...d,
-  cases: +d.cases
+  cases: +d.cases,
+  years_of_data: +d.years_of_data
 }));
+```
+
+```js
+// US states
+import * as topojson from "topojson-client";
+
+const us = await FileAttachment("./data/counties-albers-10m.json").json();
+const states = topojson.feature(us, us.objects.states);
+const nation = topojson.feature(us, us.objects.nation);
+const statemesh = topojson.mesh(us, us.objects.states, (a, b) => a !== b);
+const statemap = new Map(states.features.map(d => [d.id, d]))
+```
+
+```js
+// Load vax trends data
+const vax_trends_raw = await FileAttachment("./data/vax.csv").csv({typed:true});
+const vax_trends = vax_trends_raw.map(d => ({
+  ...d,
+  percent_change: +d.percent_change
+}));
+
+// Create a Map connecting FIPS codes to percent_change values
+const vax_by_fips = new Map();
+for (const state of states.features) {
+  const stateName = state.properties.name;
+  const stateData = vax_trends.find(d => d.geography === stateName);
+  if (stateData) {
+    vax_by_fips.set(state.id, stateData.percent_change);
+  }
+}
 ```
 
 <div class="card">
@@ -67,10 +100,11 @@ ${resize((width) => weekly(measles_weekly, {width, height: 300}))}
 
 ## Vaccination rates
 
-coming soon... 
+Next, we're looking at trends from 2009-2024, based on vaccination rates for kindergartners in different states. 
 
-- Overall trends across the country since 2009
-- State-by-state trends since 2009 (map)
+<div class="card">
+${resize((width) => vax(vax_by_fips, states, statemap, {width, height: 300}))}
+</div>
 
 
 ## Data Source
@@ -82,6 +116,5 @@ coming soon...
 </div>
 
 <!-- ```js
-display(measles_weekly)
-
+display(statemap)
 ``` -->

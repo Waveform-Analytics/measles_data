@@ -7,7 +7,7 @@ export function timeline(cases, {width, height} = {}) {
     height,
     y: {
       grid: true,
-      domain: [0, 35000],
+      domain: [0, 37000],
       label: "Cases",
       tickFormat: (x) => `${x / 1000}k`
     },
@@ -115,7 +115,7 @@ export function timeline(cases, {width, height} = {}) {
         {
           x: 2000,
           y: 36000,
-          text: "Measles declared\neliminated in the US",
+          text: "Measles declared\neliminated in\nthe US",
           fontSize: 10,
           textAnchor: "middle"
         }
