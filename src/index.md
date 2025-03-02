@@ -40,7 +40,7 @@ ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
 
 
 
-```js
+<!-- ```js
 // Show data array for QC / comment this out
 display(measles)
-``` 
+```  -->
