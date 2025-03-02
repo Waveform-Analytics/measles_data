@@ -7,6 +7,7 @@ export function timeline(cases, {width, height} = {}) {
     height,
     y: {
       grid: true,
+      domain: [0, 30000],
       label: "Cases",
       tickFormat: (x) => `${x / 1000}k`
     },
@@ -38,6 +39,7 @@ export function timeline(cases, {width, height} = {}) {
         r: 3,
         title: d => `Year: ${d.year}\nCases: ${d.cases.toLocaleString()}`
       }),
+
       Plot.rect([
         {
           x1: 2009.5,

@@ -43,6 +43,14 @@ ${resize((width) => timeline(measles, {width, height: 200} ))}
 ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
 </div>
 
+## Vaccination rates
+
+coming soon... 
+
+- Overall trends across the country since 2009
+- State-by-state trends since 2009 (map)
+
+
 ## Data Source
 
 [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
