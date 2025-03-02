@@ -3,6 +3,16 @@ theme: [air, alt]
 toc: false
 ---
 
+<style>
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+</style>
+
+<div class="content">
+
 # Measles in the US over time
 ## Exploring measles cases and vaccination rates in the United States
 
@@ -33,14 +43,13 @@ ${resize((width) => timeline(measles, {width, height: 200} ))}
 ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
 </div>
 
-
 ## Data Source
 
 [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
-
-
 
 <!-- ```js
 // Show data array for QC / comment this out
 display(measles)
 ```  -->
+
+</div>

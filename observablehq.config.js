@@ -25,7 +25,8 @@ export default {
   // Some additional configuration options and their defaults:
   //theme: ["cotton", "alt"], // try "light", "dark", "slate", etc.
   // header: "", // what to show in the header (HTML)
-  // footer: "Built with Observable.", // what to show in the footer (HTML)
+  footer: "&copy; 2025 Waveform Analytics, LLC", // what to show in the footer (HTML)
+  maxWidth: "1000px", // Restricts content width to 1000px
   // sidebar: true, // whether to show the sidebar
   // toc: true, // whether to show the table of contents
   // pager: true, // whether to show previous & next links in the footer
