@@ -26,9 +26,19 @@ import {timeline, timeline_recent}  from "./components/timeline.js";
 ```
 
 ```js
-// Load data and convert strings to numbers
+// Load annual data
 const measles_raw = await FileAttachment("./data/measles_data.csv").csv({typed: true});
 const measles = measles_raw.map(d => ({
+  ...d,
+  year: +d.year,
+  cases: +d.cases
+}));
+```
+
+```js
+// Load weekly data 
+const measles_weekly_raw = await FileAttachment("./data/weekly_cases.csv").csv({typed:true});
+const measles_weekly = measles_weekly_raw.map(d => ({
   ...d,
   year: +d.year,
   cases: +d.cases
@@ -61,3 +71,8 @@ display(measles)
 ```  -->
 
 </div>
+
+<!-- ```js
+display(measles_weekly)
+
+``` -->
