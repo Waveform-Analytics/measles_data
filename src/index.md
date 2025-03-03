@@ -10,17 +10,69 @@ toc: false
   padding: 0 20px;
 }
 
+.key-points {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.key-points h2 {
+  color: #0d6efd;
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.key-points ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.key-points li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.key-points li:before {
+  content: "•";
+  position: absolute;
+  left: 0.5em;
+  color: #0d6efd;
+}
+
+.key-points li:last-child {
+  margin-bottom: 0;
+}
+
 </style>
 
 <div class="content">
 
-# Measles in the US over time
-## Exploring measles cases and vaccination rates in the United States
+# Introduction: Measles Is Back, and It's No Accident
+Measles was officially declared eliminated in the United States in 2000—a massive public health achievement. But today, the disease is making a comeback.
 
-Measles was declared eliminated in the United States in 2000, but in recent years, cases have started to 
-rise again. Using data on measles cases and vaccination rates, we can get a better understanding 
-of what's happening and more clearly interpret what we see and hear from the current administration and from the media. 
+So why is a preventable disease resurging? The short answer: **declining vaccination rates and political decisions that threaten public health**.
 
+Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations—often fueled by political figures like Robert F. Kennedy Jr., who has made vaccine skepticism a core part of his campaign.
+
+<div class="key-points">
+  <h2>Key Facts About the Measles Resurgence</h2>
+  <ul>
+    <li>Measles was eliminated in 2000, but outbreaks are now increasing.</li>
+    <li>In 2025 so far, there are .</li>
+    <li>Most measles cases occur in unvaccinated individuals. In the latest data, 95% of cases were in people with no known vaccination history.</li>
+    <li>Hospitalization rates are high. About 1 in 5 measles cases in 2025 has required hospitalization.</li>
+    <li>Vaccination rates are declining, especially in certain states. Many states have fallen below the 95% vaccination threshold needed for herd immunity.</li>
+    <li>Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that directly contributes to lower immunization rates and increased outbreaks.</li>
+  </ul>
+</div>
+
+This page explores the numbers, the policies behind them, and why the resurgence of measles isn't just an unfortunate trend—it's a warning sign.
 
 ```js
 import {timeline, timeline_recent}  from "./components/timeline.js";
@@ -106,8 +158,18 @@ This plot shows, week to week, how the number of measles cases changed between
 based on data downloaded from the CDC website on March 1st, 2025. The number
 of cases is already out-pacing previous years.
 
+```js
+const viewTypeInput = Inputs.checkbox(["Show cumulative cases"]);
+const viewType = Generators.input(viewTypeInput);
+```
+
 <div class="card">
-${resize((width) => weekly(measles_weekly, {width, height: 300}))}
+  ${viewTypeInput}
+  ${resize((width) => weekly(measles_weekly, {
+    width, 
+    height: 300, 
+    cumulative: viewType[0] === "Show cumulative cases"
+  }))}
 </div>
 
 ## Vaccination rates
@@ -122,7 +184,7 @@ There is a lot of variability state to state in terms of changes in vaccination 
 percentages, which takes into account the total population of kindergartners in each state. 
 The shaded area indicates 95% confidence intervals.
 
-<div class="card">
+<div class="carnd">
 ${resize((width) => vax_lines(vax_yearly, measles, {width, height: 300}))}
 </div>
 
