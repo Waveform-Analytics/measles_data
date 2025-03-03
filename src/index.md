@@ -49,36 +49,58 @@ toc: false
   margin-bottom: 0;
 }
 
+.source-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
 </style>
 
 <div class="content">
 
-# Introduction: Measles Is Back, and It's No Accident
+# The Resurgence of Measles in the United States
+
 Measles was officially declared eliminated in the United States in 2000—a massive public health achievement. But today, the disease is making a comeback.
 
 So why is a preventable disease resurging? The short answer: **declining vaccination rates and political decisions that threaten public health**.
 
-Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations—often fueled by political figures like Robert F. Kennedy Jr., who has made vaccine skepticism a core part of his campaign.
+Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations - often fueled by political figures like Robert F. Kennedy Jr., who has made vaccine skepticism a core part of his political messaging.
 
 <div class="key-points">
   <h2>Key Facts About the Measles Resurgence</h2>
-  <ul>
-    <li>Measles was eliminated in 2000, but outbreaks are now increasing.</li>
-    <li>In 2025 so far, there are .</li>
-    <li>Most measles cases occur in unvaccinated individuals. In the latest data, 95% of cases were in people with no known vaccination history.</li>
-    <li>Hospitalization rates are high. About 1 in 5 measles cases in 2025 has required hospitalization.</li>
-    <li>Vaccination rates are declining, especially in certain states. Many states have fallen below the 95% vaccination threshold needed for herd immunity.</li>
-    <li>Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that directly contributes to lower immunization rates and increased outbreaks.</li>
-  </ul>
+
+  - [Measles](https://www.cdc.gov/measles/index.html) was eliminated in 2000, but [outbreaks](https://pmc.ncbi.nlm.nih.gov/articles/PMC5727570/) are now [increasing](https://www.kff.org/quick-take/u-s-measles-outbreaks-a-new-abnormal-in-a-time-of-vaccine-hesitancy/). 
+  - In 2025 so far, the numbers already look [much higher](https://www.cdc.gov/measles/data-research/index.html) than the same period last year.
+  - Most measles cases occur in [unvaccinated](https://www.cidrap.umn.edu/measles/texas-measles-outbreak-rises-146-cases) individuals. In the latest data, 95% of cases were in people with no known vaccination history.
+  - Hospitalization rates are high. About 1 in 5 measles cases in 2025 has required hospitalization.
+  - Vaccination rates are declining, especially in certain states. Many states have fallen below the [95%](https://time.com/7262314/measles-cases-united-states-rise-worldwide-outlook/) vaccination threshold needed for herd immunity.
+  - Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that [directly contributes](https://www.health.ny.gov/press/releases/2025/2025-02-27_measles.htm) to lower immunization rates and increased outbreaks.
+  
 </div>
 
 This page explores the numbers, the policies behind them, and why the resurgence of measles isn't just an unfortunate trend—it's a warning sign.
+
+## What the Data Shows: Measles is Surging Again
+
+For decades, measles cases in the U.S. remained low thanks to high vaccination rates. But in recent years, outbreaks have become more frequent and severe. 2025 is already on track to surpass previous years.
+
+The following visualizations break down key trends in measles cases and vaccination rates to help us understand why this resurgence is happening.
+
+## Measles Over Time (1985–2025)
+
+Key Insight: Measles cases plummeted after vaccines became widely available, but outbreaks have returned as vaccination rates decline.
 
 ```js
 import {timeline, timeline_recent}  from "./components/timeline.js";
 import {weekly} from "./components/weekly.js";
 import {vax, vax_lines} from "./components/vax.js";
 ```
+
+
 
 ```js
 // Load annual data
@@ -89,6 +111,7 @@ const measles = measles_raw.map(d => ({
   cases: +d.cases
 }));
 ```
+
 
 ```js
 // Load weekly data 
@@ -146,22 +169,32 @@ const vax_yearly = vax_yearly_raw.map(d => ({
 ${resize((width) => timeline(measles, {width, height: 200} ))}
 </div>
 
+- **1989**: The CDC recommended a second dose of the MMR vaccine.
+- **2000**: Measles was declared eliminated in the U.S.
+- **2019**: A record-high outbreak occurred, primarily in unvaccinated communities.
+- **2025**: Cases are rising faster than in previous years.
+
+## Recent Trends (2000–2025)
+
+**Key Insight**: *After measles was eliminated in 2000, cases remained low for nearly two decades—until they started rising again in the late 2010s. Now, post-pandemic disruptions and lower vaccine confidence have driven cases to dangerous new levels.*
+
 <div class="card">
 ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
-
 </div>
 
-## Weekly cases comparison: 2023-2025
+- **2014** & **2019** saw major outbreaks linked to vaccine hesitancy.
+- The COVID-19 pandemic disrupted childhood vaccinations, creating a ripple effect.
+- **2025**: A new peak is forming, surpassing past outbreaks.
 
-This plot shows, week to week, how the number of measles cases changed between 
-2023-2025. Of course, the data from 2025 is still being collected. This chart is 
-based on data downloaded from the CDC website on March 1st, 2025. The number
-of cases is already out-pacing previous years.
+## Weekly Cases in 2023–2025
+
+Key Insight: Measles cases in 2025 are already outpacing previous years—suggesting we’re heading for a worse outbreak than in 2023 or 2024.
 
 ```js
 const viewTypeInput = Inputs.checkbox(["Show cumulative cases"]);
 const viewType = Generators.input(viewTypeInput);
 ```
+
 
 <div class="card">
   ${viewTypeInput}
@@ -191,8 +224,6 @@ ${resize((width) => vax_lines(vax_yearly, measles, {width, height: 300}))}
 ## Data Source
 
 [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
-
-
 
 </div>
 
