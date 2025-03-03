@@ -109,25 +109,52 @@ ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
   }))}
 </div>
 
-## Vaccination Rates
-Next, we're looking at trends from 2009-2024, based on vaccination rates for kindergartners in different states. 
+## The Role of Vaccine Decline: Why Measles is Back
 
-<div class="card">
-${resize((width) => vax(vax_by_fips, states))}
-</div>
+Measles outbreaks don’t just happen randomly—they occur when vaccination rates drop below the herd immunity threshold of 95%. That’s the percentage of people who need to be vaccinated to prevent widespread outbreaks.
 
-There is a lot of variability state to state in terms of changes in vaccination rates, and it's hard to see what's happening overall from the map. The next plot shows the nationwide percentages, which takes into account the total population of kindergartners in each state. The shaded area indicates 95% confidence intervals.
+Unfortunately, vaccination rates have been steadily declining, especially in certain states where policies have weakened school vaccine requirements.
+
+The following visualizations highlight how these declining rates are directly fueling the rise in measles cases. 
+
+### Kindergarten Vaccination Rates (2009–2024)
+
+**The takeaway**: *The percentage of kindergartners receiving the MMR vaccine has dropped nationwide, with some states falling well below the critical 95% threshold.*
 
 <div class="card">
 ${resize((width) => vax_lines(vax_yearly, measles, {width, height: 300}))}
 </div>
+
+- **2009–2015**: MMR vaccination rates remained steady around 95%.
+- **2016–2019**: A slight decline began, as misinformation campaigns gained traction.
+- **2020–2022**: The COVID-19 pandemic disrupted routine childhood vaccinations.
+- **2023–2024**: Some states are now below 90%, increasing the risk of outbreaks.
+
+💡 The lower the vaccination rate, the easier it is for measles to spread.
+
+### State-by-State Vaccine Decline
+
+**The takeaway**: *Not all states are equally at risk—some have seen much sharper declines in vaccination rates due to policy changes and misinformation.*
+
+<div class="card">
+
+${resize((width) => vax(vax_by_fips, states))}
+</div>
+
+- States that have maintained strong [vaccine mandates](https://www.kff.org/coronavirus-covid-19/issue-brief/headed-back-to-school-in-2024-an-update-on-childrens-routine-vaccination-trends/) (e.g., California, New York) have kept rates near 95%.
+- States that have expanded vaccine [exemptions](https://www.npr.org/sections/shots-health-news/2025/02/28/nx-s1-5312088/measles-texas-outbreak-contagious-spread) (e.g., Texas, Florida, Idaho) have seen the sharpest declines.
+- Some communities have rates below 85%, [well below](https://www.healthline.com/health-news/texas-measles-outbeak-low-vaccination-rates) the safety threshold.
+
+
+💡 The biggest outbreaks in recent years have occurred in states with the most [exemptions](https://pmc.ncbi.nlm.nih.gov/articles/PMC9037455/).
+
 
 ## Data Source
 [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
 
 </div>
 
-<!-- Technical Implementation -->
+<!-- Data / Analysis / Prep  -->
 ```js
 // Import visualization components
 import {timeline, timeline_recent} from "./components/timeline.js";

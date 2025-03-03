@@ -43,6 +43,9 @@ export function vax_lines(vax_yearly, measles_data, {width, height} = {}) {
     ...vax_yearly.map(d => d.estimate_pct)
   ]);
 
+  const firstYear = vax_yearly[0].year;
+  console.log("First year:", firstYear); // Debug log
+
   return Plot.plot({
     title: "Kindergarten vaccination rates",
     width,
@@ -73,13 +76,27 @@ export function vax_lines(vax_yearly, measles_data, {width, height} = {}) {
         stroke: "#0984e3",
         strokeWidth: 3,
         tip: {
-          fontSize: 16,
+          fontSize: 14,
           fill: "white",
           stroke: "#ddd",
           strokeWidth: 1,
           padding: 8
         },
         title: d => `${d.year}\nVaccination Rate: ${(d.estimate_pct * 100).toFixed(1)}%\n95% CI: [${(d.ci_lower * 100).toFixed(1)}%, ${(d.ci_upper * 100).toFixed(1)}%]`
+      }),
+      // Herd immunity threshold line
+      Plot.ruleY([0.95], {
+        stroke: "#e74c3c",
+        strokeDasharray: "4,4",
+        strokeWidth: 2
+      }),
+      // Label for herd immunity threshold
+      Plot.text([{x: 2012, y: 0.955, text: "Herd Immunity Threshold (95%)"}], {
+        x: "x",
+        y: "y",
+        text: "text",
+        fill: "#e74c3c",
+        dx: 5
       })
     ],
     style: {

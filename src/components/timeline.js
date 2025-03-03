@@ -115,7 +115,7 @@ export function timeline(cases, {width, height} = {}) {
         {
           x: 2000,
           y: 36000,
-          text: "Measles declared\neliminated in\nthe US",
+          text: "Measles\neliminated in\nthe US",
           fontSize: 10,
           textAnchor: "middle"
         }
