@@ -3,52 +3,7 @@ theme: [air, alt]
 toc: false
 ---
 
-<style>
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.key-points {
-  background-color: #f8f9fa;
-  border-left: 4px solid #0d6efd;
-  border-radius: 4px;
-  padding: 1.5rem;
-  margin: 2rem 0;
-}
-
-.key-points h2 {
-  color: #0d6efd;
-  margin-top: 0;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.key-points ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.key-points li {
-  position: relative;
-  padding-left: 1.5em;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-}
-
-.key-points li:before {
-  content: "•";
-  position: absolute;
-  left: 0.5em;
-  color: #0d6efd;
-}
-
-.key-points li:last-child {
-  margin-bottom: 0;
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 
 <!-- Main content container -->
 <div class="content">
