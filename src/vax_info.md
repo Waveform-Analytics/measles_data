@@ -53,34 +53,44 @@ toc: false
 <!-- Main content container -->
 <div class="content">
 
-# The Resurgence of Measles in the United States
-## 2 March 2025
+
+
+# The Role of Vaccine Decline: Why Measles is Back
+
 ---
 
-Measles was officially declared eliminated in the United States in 2000—a massive public health achievement. But today, the disease is making a comeback.
+Measles outbreaks don't just happen randomly—they occur when vaccination rates drop below the herd immunity threshold of 95%. That's the percentage of people who need to be vaccinated to prevent widespread outbreaks.
 
-So why is a preventable disease resurging? The short answer: **declining vaccination rates and political decisions that threaten public health**.
+Unfortunately, vaccination rates have been steadily declining, especially in certain states where policies have weakened school vaccine requirements.
 
-Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations - often fueled by political figures and celebrities. 
+The following visualizations highlight how these declining rates are directly fueling the rise in measles cases. 
 
-<div class="key-points">
-  <h2>Key Facts About the Measles Resurgence</h2>
+### Kindergarten Vaccination Rates (2009–2024)
 
-  - [Measles](https://www.cdc.gov/measles/index.html) was eliminated in 2000, but [outbreaks](https://pmc.ncbi.nlm.nih.gov/articles/PMC5727570/) are now [increasing](https://www.kff.org/quick-take/u-s-measles-outbreaks-a-new-abnormal-in-a-time-of-vaccine-hesitancy/). 
-  - In 2025 so far, the numbers already look [much higher](https://www.cdc.gov/measles/data-research/index.html) than the same period last year.
-  - Most measles cases occur in [unvaccinated](https://www.cidrap.umn.edu/measles/texas-measles-outbreak-rises-146-cases) individuals. In the latest data, 95% of cases were in people with no known vaccination history.
-  - Hospitalization rates are high. About 1 in 5 measles cases in 2025 has required hospitalization.
-  - Vaccination rates are declining, especially in certain states. Many states have fallen below the [95%](https://time.com/7262314/measles-cases-united-states-rise-worldwide-outlook/) vaccination threshold needed for herd immunity.
-  - Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that [directly contributes](https://www.health.ny.gov/press/releases/2025/2025-02-27_measles.htm) to lower immunization rates and increased outbreaks.
+**The takeaway**: *The percentage of kindergartners receiving the MMR vaccine has dropped nationwide, with some states falling well below the critical 95% threshold.*
 
+<div class="card">
+${resize((width) => vax_lines(vax_yearly, measles, {width, height: 300}))}
 </div>
 
----
-### Data Source
+- **2009–2015**: MMR vaccination rates remained steady around 95%.
+- **2016–2019**: A slight decline began, as misinformation campaigns gained traction.
+- **2020–2022**: The COVID-19 pandemic disrupted routine childhood vaccinations.
+- **2023–2024**: Some states are now below 90%, increasing the risk of outbreaks.
 
-The plots and data shown on this site are from the US Centers for Disease Control and Prevention website.
+### State-by-State Vaccine Decline
 
-[https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
+**The takeaway**: *Not all states are equally at risk—some have seen much sharper declines in vaccination rates due to policy changes and misinformation.*
+
+<div class="card">
+
+${resize((width) => vax(vax_by_fips, states))}
+</div>
+
+- States that have maintained strong [vaccine mandates](https://www.kff.org/coronavirus-covid-19/issue-brief/headed-back-to-school-in-2024-an-update-on-childrens-routine-vaccination-trends/) (e.g., California, New York) have kept rates near 95%.
+- States that have expanded vaccine [exemptions](https://www.npr.org/sections/shots-health-news/2025/02/28/nx-s1-5312088/measles-texas-outbreak-contagious-spread) (e.g., Texas, Florida, Idaho) have seen the sharpest declines.
+- Some communities have rates below 85%, [well below](https://www.healthline.com/health-news/texas-measles-outbeak-low-vaccination-rates) the safety threshold.
+
 
 </div>
 

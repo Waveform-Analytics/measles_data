@@ -53,34 +53,44 @@ toc: false
 <!-- Main content container -->
 <div class="content">
 
-# The Resurgence of Measles in the United States
-## 2 March 2025
+# Measles cases: the data
 ---
 
-Measles was officially declared eliminated in the United States in 2000—a massive public health achievement. But today, the disease is making a comeback.
+## Historical Trends (1985–2025)
+**The takeaway**: *Measles cases plummeted after vaccines became widely available, but outbreaks have returned as vaccination rates decline.*
 
-So why is a preventable disease resurging? The short answer: **declining vaccination rates and political decisions that threaten public health**.
-
-Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations - often fueled by political figures and celebrities. 
-
-<div class="key-points">
-  <h2>Key Facts About the Measles Resurgence</h2>
-
-  - [Measles](https://www.cdc.gov/measles/index.html) was eliminated in 2000, but [outbreaks](https://pmc.ncbi.nlm.nih.gov/articles/PMC5727570/) are now [increasing](https://www.kff.org/quick-take/u-s-measles-outbreaks-a-new-abnormal-in-a-time-of-vaccine-hesitancy/). 
-  - In 2025 so far, the numbers already look [much higher](https://www.cdc.gov/measles/data-research/index.html) than the same period last year.
-  - Most measles cases occur in [unvaccinated](https://www.cidrap.umn.edu/measles/texas-measles-outbreak-rises-146-cases) individuals. In the latest data, 95% of cases were in people with no known vaccination history.
-  - Hospitalization rates are high. About 1 in 5 measles cases in 2025 has required hospitalization.
-  - Vaccination rates are declining, especially in certain states. Many states have fallen below the [95%](https://time.com/7262314/measles-cases-united-states-rise-worldwide-outlook/) vaccination threshold needed for herd immunity.
-  - Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that [directly contributes](https://www.health.ny.gov/press/releases/2025/2025-02-27_measles.htm) to lower immunization rates and increased outbreaks.
-
+<div class="card">
+${resize((width) => timeline(measles, {width, height: 200} ))}
 </div>
 
----
-### Data Source
+- **1989**: The CDC recommended a second dose of the MMR vaccine.
+- **2000**: Measles was declared eliminated in the U.S.
+- **2019**: A record-high outbreak occurred, primarily in unvaccinated communities.
+- **2025**: Cases are rising faster than in previous years.
 
-The plots and data shown on this site are from the US Centers for Disease Control and Prevention website.
+## Recent Trends (2000–2025)
+**The takeaway**: *After measles was eliminated in 2000, cases remained low for nearly two decades—until they started rising again in the late 2010s. Now, post-pandemic disruptions and lower vaccine confidence have led to a concerning increase in cases.*
 
-[https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
+<div class="card">
+${resize((width) => timeline_recent(measles, {width, height: 200} ))}
+</div>
+
+- **2014** & **2019** saw major outbreaks linked to vaccine hesitancy.
+- The **COVID-19** pandemic disrupted childhood vaccinations, creating a ripple effect.
+- **2025**: A new peak is forming, surpassing past outbreaks.
+
+## Weekly Cases in 2023–2025
+**The takeaway**: *Measles cases in 2025 are already outpacing previous years—suggesting we're heading for a worse outbreak than in 2023 or 2024*.
+
+<div class="card">
+  ${viewTypeInput}
+  ${resize((width) => weekly(measles_weekly, {
+    width, 
+    height: 300, 
+    cumulative: viewType[0]
+  }))}
+</div>
+
 
 </div>
 
@@ -141,8 +151,9 @@ const vax_yearly = vax_yearly_raw.map(d => ({
 }));
 
 // Add toggle for cumulative cases view
-const viewTypeInput = Inputs.checkbox(["Show cumulative cases"]);
+const viewTypeInput = Inputs.checkbox(["← Show cumulative cases"]);
 const viewType = Generators.input(viewTypeInput);
 ```
+
 
 
