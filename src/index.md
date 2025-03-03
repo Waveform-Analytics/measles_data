@@ -63,7 +63,6 @@ So why is a preventable disease resurging? The short answer: **declining vaccina
 
 Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations - often fueled by political figures and celebrities. 
 
-## Key Facts About the Resurgence
 <div class="key-points">
   <h2>Key Facts About the Measles Resurgence</h2>
 
