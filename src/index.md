@@ -54,6 +54,8 @@ toc: false
 <div class="content">
 
 # The Resurgence of Measles in the United States
+## 2 March 2025
+---
 
 Measles was officially declared eliminated in the United States in 2000—a massive public health achievement. But today, the disease is making a comeback.
 
@@ -73,6 +75,8 @@ Measles cases have been rising steadily over the past decade, and **2025's early
   - Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that [directly contributes](https://www.health.ny.gov/press/releases/2025/2025-02-27_measles.htm) to lower immunization rates and increased outbreaks.
 
 </div>
+
+---
 
 ## Historical Trends (1985–2025)
 **The takeaway**: *Measles cases plummeted after vaccines became widely available, but outbreaks have returned as vaccination rates decline.*
@@ -109,9 +113,11 @@ ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
   }))}
 </div>
 
+---
+
 ## The Role of Vaccine Decline: Why Measles is Back
 
-Measles outbreaks don’t just happen randomly—they occur when vaccination rates drop below the herd immunity threshold of 95%. That’s the percentage of people who need to be vaccinated to prevent widespread outbreaks.
+Measles outbreaks don't just happen randomly—they occur when vaccination rates drop below the herd immunity threshold of 95%. That's the percentage of people who need to be vaccinated to prevent widespread outbreaks.
 
 Unfortunately, vaccination rates have been steadily declining, especially in certain states where policies have weakened school vaccine requirements.
 
@@ -148,7 +154,29 @@ ${resize((width) => vax(vax_by_fips, states))}
 
 💡 The biggest outbreaks in recent years have occurred in states with the most [exemptions](https://pmc.ncbi.nlm.nih.gov/articles/PMC9037455/).
 
+---
 
+## What You Can Do
+
+The rise of measles isn't just a random phenomenon — it's the result of declining vaccination rates and policy failures. Here are the key steps you can take to protect public health:
+
+### 1. Get Vaccinated
+- Check your vaccination status with your doctor
+- Get two doses of the MMR vaccine for full protection
+- If you're an adult, a simple blood test can confirm your immunity
+
+### 2. Stay Informed
+- Trust reliable sources like the [CDC](https://www.cdc.gov/measles/), [WHO](https://www.who.int/health-topics/vaccines), and [American Academy of Pediatrics](https://www.aap.org/en/patient-care/immunizations/)
+- Be skeptical of sensational claims about vaccines
+- Share accurate information with your community
+
+### 3. Support Public Health
+- Know your state's vaccine laws
+- Contact representatives to support strong vaccine policies
+- Protect those who can't get vaccinated by maintaining herd immunity
+
+
+---
 ## Data Source
 [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html) - downloaded on 1 March 2025
 
