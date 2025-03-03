@@ -61,7 +61,7 @@ Measles was officially declared eliminated in the United States in 2000—a mass
 
 So why is a preventable disease resurging? The short answer: **declining vaccination rates and political decisions that threaten public health**.
 
-Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations - often fueled by political figures like Robert F. Kennedy Jr., who has made vaccine skepticism a core part of his political messaging.
+Measles cases have been rising steadily over the past decade, and **2025's early numbers suggest this year could far exceed previous years**. The reason isn't a mystery. Fewer children are getting vaccinated due to misinformation, weakened vaccine policies, and growing distrust in public health recommendations - often fueled by political figures and celebrities. 
 
 ## Key Facts About the Resurgence
 <div class="key-points">
