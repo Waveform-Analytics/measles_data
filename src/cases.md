@@ -12,27 +12,19 @@ toc: false
 ---
 
 ## Historical Trends (1985–2025)
-**The takeaway**: *Measles cases plummeted after vaccines became widely available, but outbreaks have returned as vaccination rates decline.*
+*Measles cases plummeted after vaccines became widely available, but outbreaks have returned as vaccination rates decline.*
 
 <div class="card">
 ${resize((width) => timeline(measles, {width, height: 200} ))}
 </div>
 
-- **1989**: The CDC recommended a second dose of the MMR vaccine.
-- **2000**: Measles was declared eliminated in the U.S.
-- **2019**: A record-high outbreak occurred, primarily in unvaccinated communities.
-- **2025**: Cases are rising faster than in previous years.
-
 ## Recent Trends (2000–2025)
-**The takeaway**: *After measles was eliminated in 2000, cases remained low for nearly two decades—until they started rising again in the late 2010s. Now, post-pandemic disruptions and lower vaccine confidence have led to a concerning increase in cases.*
+*After measles was declared eliminated in the U.S. in 2000, cases remained low for nearly two decades. However, cases began rising in the late 2010s, driven by outbreaks in under-vaccinated communities and vaccine hesitancy. More recently, disruptions to routine immunizations during the COVID-19 pandemic and [declining](https://www.pbs.org/newshour/health/measles-cases-are-rising-in-the-u-s-heres-why-misinformation-about-the-vaccine-persists-today) [vaccine confidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC10946219/) have contributed to a concerning increase in cases.*
 
 <div class="card">
 ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
 </div>
 
-- **2014** & **2019** saw major outbreaks linked to vaccine hesitancy.
-- The **COVID-19** pandemic disrupted childhood vaccinations, creating a ripple effect.
-- **2025**: A new peak is forming, surpassing past outbreaks.
 
 ## Weekly Cases in 2023–2025
 **The takeaway**: *Measles cases in 2025 are already outpacing previous years—suggesting we're heading for a worse outbreak than in 2023 or 2024*.

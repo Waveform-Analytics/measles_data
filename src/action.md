@@ -18,7 +18,7 @@ The rise of measles isn't just a random phenomenon — it's the result of declin
 - If you're an adult, a simple blood test can confirm your immunity
 
 ## 2. Stay Informed
-- Trust reliable sources like the [CDC](https://www.cdc.gov/measles/), [WHO](https://www.who.int/health-topics/vaccines), and [American Academy of Pediatrics](https://www.aap.org/en/patient-care/immunizations/)
+- Trust reliable sources like the World Health Organization ([WHO](https://www.who.int/health-topics/vaccines)) and the [American Academy of Pediatrics](https://www.aap.org/en/patient-care/immunizations/)
 - Be skeptical of sensational claims about vaccines
 - Share accurate information with your community
 

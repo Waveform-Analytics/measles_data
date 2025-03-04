@@ -26,7 +26,7 @@ Measles cases have been rising steadily over the past decade, and **2025's early
   - Most measles cases occur in [unvaccinated](https://www.cidrap.umn.edu/measles/texas-measles-outbreak-rises-146-cases) individuals. In the latest data, 95% of cases were in people with no known vaccination history.
   - Hospitalization rates are high. About 1 in 5 measles cases in 2025 has required hospitalization.
   - Vaccination rates are declining, especially in certain states. Many states have fallen below the [95%](https://time.com/7262314/measles-cases-united-states-rise-worldwide-outlook/) vaccination threshold needed for herd immunity.
-  - Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing anti-vaccine messaging that [directly contributes](https://www.health.ny.gov/press/releases/2025/2025-02-27_measles.htm) to lower immunization rates and increased outbreaks.
+  - Political rhetoric and misinformation are fueling the problem. High-profile figures like RFK Jr. are pushing [anti-vaccine](https://www.nbcnews.com/politics/trump-administration/measles-outbreak-politically-perilous-trump-rfk-jr-rcna194053) [messaging](https://apnews.com/article/rfk-kennedy-election-vaccines-2ccde2df146f57b5e8c26e8494f0a16a) that directly contributes to lower immunization rates and increased outbreaks.
 
 </div>
 
