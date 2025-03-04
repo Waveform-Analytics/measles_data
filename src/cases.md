@@ -27,7 +27,7 @@ ${resize((width) => timeline_recent(measles, {width, height: 200} ))}
 
 
 ## Weekly Cases in 2023–2025
-**The takeaway**: *Measles cases in 2025 are already outpacing previous years—suggesting we're heading for a worse outbreak than in 2023 or 2024*.
+*Measles cases in 2025 are already outpacing previous years—suggesting we're heading for a worse outbreak than in 2023 or 2024*.
 
 <div class="card">
   ${viewTypeInput}
